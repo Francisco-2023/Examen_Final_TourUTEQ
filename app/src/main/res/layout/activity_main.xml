@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbarTrackHorizontal="@drawable/common_google_signin_btn_icon_dark_normal_background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="250dp"
+        android:layout_height="73dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:fontFamily="serif"
+        android:text="Universidad Tecnica Estatal de Quevedo\nIngeniería en Telemática\n"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_uteq"
+        android:layout_width="100dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="4dp"
+        android:foreground="@mipmap/ic_uteq_foreground"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/txtTitulo"
+        app:layout_constraintLeft_toLeftOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <ImageView
+        android:id="@+id/img_facul"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="336dp"
+        android:foreground="@mipmap/ic_fci1_round"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/txtTitulo"
+        app:layout_constraintRight_toRightOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btCamera"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:onClick="abrirCamara"
+        android:text="Cámara"
+        app:layout_constraintLeft_toRightOf="@+id/btGallery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/btGallery"></FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="402dp"
+        android:layout_height="178dp"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="serif"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Edificio"
+        android:textAlignment="center"
+        android:textColor="#0C4BCD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/btObject"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:onClick="OCRfx"
+        android:text="OCR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btFace" />
+
+    <Button
+        android:id="@+id/btObject"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:onClick="Objectofx"
+        android:text="Objetos"
+
+        app:layout_constraintBottom_toTopOf="@id/btText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btFace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:onClick="Rostrosfx"
+        android:text="Rostros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
